@@ -19,22 +19,22 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.helloworld.databinding.ActivityUI2Binding;
+//import com.example.helloworld.databinding.ActivityUI2Binding;
 
 public class UI2Activity extends AppCompatActivity {
-    private ActivityUI2Binding mBinding;
-//    private TextView mTextView;
-//    private Button mButtonLeft, mButtonRight, mButtonOK;
-//    private Switch mSwitch;
-//    private ProgressBar mProgressBar;
-//    private EditText mEditTextNumber;
-//    private RadioGroup mRadioGroup;
-//    private ImageView mImageView;
-//    private SeekBar mSeekBar;
-//    private CheckBox mCheckBoxAndroid, mCheckBoxJava, mCheckBoxSQL;
-//    private RatingBar mRatingBar;
+
+    private TextView mTextView;
+    private Button mButtonLeft, mButtonRight, mButtonOK;
+    private Switch mSwitch;
+    private ProgressBar mProgressBar;
+    private EditText mEditTextNumber;
+    private RadioGroup mRadioGroup;
+    private ImageView mImageView;
+    private SeekBar mSeekBar;
+    private CheckBox mCheckBoxAndroid, mCheckBoxJava, mCheckBoxSQL;
+    private RatingBar mRatingBar;
         private String android = "", java = "", sql = "";
-//    private RadioButton mRadioButtonAndroid,mRadioButtonApple,mRadioButtonAli;
+    private RadioButton mRadioButtonAndroid,mRadioButtonApple,mRadioButtonAli;
 
 
 
