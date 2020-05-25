@@ -17,7 +17,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(mBinding.getRoot());
 
         Intent intent=getIntent();
-        String phone = intent.getStringExtra("date_phone");
-        mBinding.textPhone.setText(phone);
+        String phone = intent.getStringExtra("data_phone");
+        mBinding.textphone.setText(phone);
     }
 }
