@@ -47,7 +47,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
@@ -55,10 +55,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/ic_register" />
+                app:srcCompat="@drawable/ic_register"
+                android:contentDescription="@string/todo" />
 
             <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/edit_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -82,20 +83,21 @@
                     app:srcCompat="@drawable/sex" />
 
                 <RadioGroup
-                    android:layout_width="wrap_content"
+                    android:id="@+id/radio_group_sex"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <RadioButton
-                        android:id="@+id/radioButton"
+                        android:id="@+id/radio_man"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_weight="0"
                         android:text="@string/man" />
 
                     <RadioButton
-                        android:id="@+id/radioButton2"
+                        android:id="@+id/radio_woman"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:text="@string/woman" />
@@ -103,7 +105,7 @@
             </LinearLayout>
 
             <EditText
-                android:id="@+id/editText7"
+                android:id="@+id/edit_pwd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -114,7 +116,7 @@
                 android:inputType="textPassword" />
 
             <EditText
-                android:id="@+id/editText8"
+                android:id="@+id/edit_pwd_ok"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -125,18 +127,19 @@
                 android:inputType="textPassword" />
 
             <EditText
-                android:id="@+id/editText10"
+                android:id="@+id/edit_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:drawableStart="@drawable/phone"
                 android:drawablePadding="80dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/phone" />
+                android:inputType="phone"
+                android:text="@string/phone"
+                android:autofillHints="" />
 
             <Switch
-                android:id="@+id/switch1"
+                android:id="@+id/switch_sms"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -144,14 +147,14 @@
                 android:text="@string/jie" />
 
             <CheckBox
-                android:id="@+id/checkBox"
+                android:id="@+id/check_prosocol"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/tong" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/button_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
