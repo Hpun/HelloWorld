@@ -67,8 +67,8 @@
                 android:drawableStart="@drawable/username"
                 android:drawablePadding="100dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/login" />
+                android:hint="@string/login"
+                android:inputType="textPersonName" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -131,12 +131,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:autofillHints=""
                 android:drawableStart="@drawable/phone"
                 android:drawablePadding="80dp"
                 android:ems="10"
-                android:inputType="phone"
-                android:text="@string/phone"
-                android:autofillHints="" />
+                android:hint="@string/phone"
+                android:inputType="phone" />
 
             <Switch
                 android:id="@+id/switch_sms"
