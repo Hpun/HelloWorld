@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import com.example.helloworld.databinding.ActivityHomeBinding;
 
+import java.util.Objects;
+
 public class HomeActivity extends AppCompatActivity {
 
     private ActivityHomeBinding mBinding;
@@ -22,13 +24,18 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(mBinding.getRoot());
 
         Intent intent = getIntent();
-        String phone = intent.getStringExtra("data_phone");
+        UserInfo userInfo = (UserInfo) intent.getSerializableExtra("userInfo");
+        String phone = Objects.requireNonNull(userInfo).getPhone();
+
         mBinding.textphone.setText(phone);
         SharedPreferences sp = getSharedPreferences("user_info", MODE_PRIVATE);
-        String textname = sp.getString("name" + phone, "0");
-        String textsex = sp.getString("sex" + phone, "0");
+        String textname = userInfo.getUserName();
+        String textsex = userInfo.getSex();
+        String userSms = userInfo.getSms();
         mBinding.textname.setText(textname);
         mBinding.textsex.setText(textsex);
+        String temp = mBinding.textsms.getText().toString() + ":"+userSms;
+        mBinding.textsms.setText(temp);
     }
 
     /**
