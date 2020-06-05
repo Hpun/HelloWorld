@@ -1,6 +1,8 @@
 package com.example.helloworld;
 
-public class UserInfo {
+import java.io.Serializable;
+
+public class UserInfo implements Serializable {
     private String userName;
     private String password;
     private String sex;
