@@ -14,7 +14,7 @@ import java.util.Objects;
 public class HomeActivity extends AppCompatActivity {
 
     private ActivityHomeBinding mBinding;
-
+    public static final String EXIT_HOME ="exit_home";
     private long exitTime=0;
 
     @Override
@@ -36,6 +36,8 @@ public class HomeActivity extends AppCompatActivity {
         mBinding.textsex.setText(textsex);
         String temp = mBinding.textsms.getText().toString() + ":"+userSms;
         mBinding.textsms.setText(temp);
+        intent.putExtra(EXIT_HOME,"您已退出账号");
+        setResult(RESULT_OK,intent);
     }
 
     /**
